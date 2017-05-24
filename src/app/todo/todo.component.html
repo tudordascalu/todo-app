@@ -1,0 +1,12 @@
+<div class="todoBox">
+    <div class ="headerContainer">
+    <h4 class="todoLabel">{{todoName}}</h4>
+    <div [ngClass]="{'green':todoStatus=='completed'}" class="circle" ></div>
+    </div>
+
+    <h5>Status: <i><span class="todoSpan">{{todoStatus}}</span></i></h5>
+    <div class="buttons">
+    <button (click)="checkTodo(); isChecked='true'" [disabled]="isChecked || todoStatus == 'completed'" id="btnCheck" class="btn btn-default">CHECK</button>
+    <button (click)="deleteTodo()" class="btn btn-default">DELETE</button>
+    </div>
+</div>

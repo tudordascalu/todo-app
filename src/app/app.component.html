@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<!--<h2>
+<b> Tudor's Todo List </b> 
+</h2>
+-->
+<div class="inContainer form-inline">
+<input type="text" class="inTodo form-control" #todo placeholder="TODO name">
+<button (click)="addTodo(todo.value)" class="btn btn-default">CREATE</button>
+</div>
+<hr class="hidden-xs">
+<div class="todosContainer">
+
+<todo class="todo" [todoName]="tod.name" [todoStatus]="tod.status" *ngFor="let tod of todos">
+</todo>
+</div>
+
